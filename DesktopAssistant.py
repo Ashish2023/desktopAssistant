@@ -87,7 +87,7 @@ def date():
 
 #weather condition
 def weather():
-    api_key = "e22fcbd36baffc5ba1b4b250e3e8e54a" #generate your own api key from open weather
+    api_key = "a" #generate your own api key from open weather
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
     speak("tell me which city")
     city_name = takeCommand()
@@ -115,8 +115,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('virtualassistantmini@gmail.com', 'Desktop@123')
-    server.sendmail('virtualassistantmini@gmail.com', to, content)
+    server.login('email', 'password')
+    server.sendmail('reciever mail', to, content)
     server.close()
 
 if __name__ == "__main__":
@@ -220,7 +220,7 @@ if __name__ == "__main__":
                 speak("Sorry . I am not able to send this email")
 #visual studio
         elif 'open code' in query:
-            codePath = "C:\\Users\\ashis\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            codePath = "Crams\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
 #screenshot
         elif ("screenshot" in query):
